@@ -14,9 +14,8 @@ Comando | Acción
 --- | ---
 `virtualenv .env` | **Crea un entorno virtual**
 `.env\Scripts\activate ` | **Activa el entorno virtual**
-`pip install Django` | **Instala Django**
-`pip install pillow` | **Instala  pillow**
-`py manage.py runserver` | **ejecuta el servidor de desarrollo**
+`pip install -r requirements.txt` | **Instala dependencias y requerimientos**
+`py manage.py runserver` | **Ejecuta el servidor de desarrollo**
 
 </div>
 
