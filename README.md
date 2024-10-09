@@ -13,7 +13,7 @@ Comandos para ejecución de la app:
 Comando | Acción
 --- | ---
 `virtualenv .env` | **Crea un entorno virtual**
-`.env\Scripts\activate ` | **Activa el entorno virtual**
+`.env\Scripts\activate` | **Activa el entorno virtual**
 `pip install -r requirements.txt` | **Instala dependencias y requerimientos**
 `py manage.py runserver` | **Ejecuta el servidor de desarrollo**
 
