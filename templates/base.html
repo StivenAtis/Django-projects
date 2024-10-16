@@ -1,0 +1,38 @@
+{% extends 'adminlte/base.html' %}
+{% comment %} <!DOCTYPE html>
+<html>
+  <head lang="es">
+    <meta charset="UTF-8" />
+    <title>Eliminatorias al mundial 2026</title>
+  </head>
+  <body>
+    <h1>Album Eliminatorias al mundial 2026</h1>
+    <ul>
+      <li>
+        <a href="{% url 'team-list' %}">Team</a>
+      </li>
+      <li>
+        <a href="{% url 'player-list' %}">Player</a>
+      </li>
+    </ul>
+    <hr />
+    <div>{% block section %} {% endblock section %}</div>
+    <div>{% block maincontent %} {% endblock maincontent %}</div>
+  </body>
+</html> {% endcomment %}
+
+
+
+{% block title %}Album Eliminatorias al Mundial 2026{% endblock %}
+{% block bodyclass %} skin-red {% endblock %}
+{% block content %}
+    <div class="container">
+        {% block section %}
+        {% endblock section %}
+    </div>
+    <div class="container">
+        {% block maincontent %}
+        {% endblock maincontent %}
+    </div>
+  
+{% endblock %}

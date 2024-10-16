@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block section %}
+   <h2>
+       {% comment %} {{ object.first_name }} {{ object.last_name }} {% endcomment %}
+       <div>
+        <label>First Name:</label>
+        <input type="text" name="first_name" value="{{ object.first_name }}" readonly>
+    </div>
+    <div>
+        <label>Last Name:</label>
+        <input type="text" name="last_name" value="{{ object.last_name }}" readonly>
+    </div>
+    <div>
+        <label>Weight:</label>
+        <input type="text" name="weight" value="{{ object.weight }}" readonly>
+    </div>
+    <div>
+        <label>Height:</label>
+        <input type="text" name="height" value="{{ object.height }}" readonly>
+    </div>
+    <div>
+        <label>Team:</label>
+        <input type="text" name="team" value="{{ object.team }}" readonly>
+    </div>
+       {% comment %} {% if object.team_id %}
+         ( <a href="{% url "team-detail" object.team_id %}">
+             {{ object.team }}
+           </a> )
+       {% endif %} {% endcomment %}
+    </h2>
+    <p><strong>comments: </strong>{{ object.comment|default:"no comments" }}</p>
+   <hr>
+{% endblock section %}
+
+{% block maincontent %}
+<div>
+ <div>
+     <img src="{% static object.photo.url %}" style="width:500px;height:600px" />     
+ </div>
+</div>
+{% endblock maincontent %} 
+

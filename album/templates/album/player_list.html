@@ -1,13 +1,17 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lista de jugadores</title>
-  </head>
-  <body>
-    <h1>Lista de Jugadores|</h1>
+{% extends 'base.html' %}
 
-    <h1>{{ object_list }}</h1>
-  </body>
-</html>
+{% block section %}
+	 <h2>Players</h2>
+	 <hr>
+{% endblock section %}
+
+{% block maincontent %}
+   <div>
+
+      {% for c in object_list %}
+         <a href="{% url 'player-detail' c.pk %}">
+              {{ c.first_name }} <br>
+         </a>
+      {% endfor %}
+    </div>
+{% endblock maincontent %}
