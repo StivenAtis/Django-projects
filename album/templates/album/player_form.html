@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block maincontent %}
+
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %} {{ form.as_p }}
+  
+  <button type="submit">Save</button>
+    <a href="{% url 'player-list' %}">Cancel</a>
+</form>
+
+{% endblock maincontent %}
