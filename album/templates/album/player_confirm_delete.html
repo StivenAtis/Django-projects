@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block maincontent %}
+
+{% if object %}
+    <h2>Confirm deletion of player: {{ object.firts_name }}</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Are you sure you want to delete this player: {{ object.firts_name }} ?</p>
+        <button class="btn btn-outline-danger" type="submit">Yes, I'm sure</button>
+        <a class="btn btn-outline-secondary" href="{% url 'player-detail' object.id %}">Cancel</a>
+    </form>
+{% else %}
+    <h2>Team not found</h2>
+{% endif %}
+
+{% endblock maincontent %}
