@@ -3,6 +3,8 @@
 {% load static %}
 
 {% block section %}
+<a class="btn btn-outline-primary" href="{% url "player-update" object.id %}">Edit</a>
+<a class="btn btn-outline-danger" href="{% url "player-delete" object.id %}">Delete</a>
    <h2>
        {% comment %} {{ object.first_name }} {{ object.last_name }} {% endcomment %}
        <div>
